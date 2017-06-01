@@ -25,7 +25,7 @@ class Api {
   }
 
   static xhr(route, params, verb) {
-    // const host = 'http://www.recipepuppy.com'; // recipes implementation
+    // const host = 'http://www.itempuppy.com'; // items implementation
     const host = "http://rest.learncode.academy/api/mindworking-test";
     const url = `${host}${route}`;
     let options = Object.assign({ method: verb }, params ? { body: JSON.stringify(params) } : null );
@@ -36,7 +36,7 @@ class Api {
         return json
       }
       return json.then(err => {throw err});
-    // }).then( json => json.results ); // recipes implementation
+    // }).then( json => json.results ); // items implementation
     }).then( json => json );
   }
 }

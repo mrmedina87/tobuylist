@@ -1,8 +1,8 @@
 // types.js
 
-// Recipes
-export const SET_SEARCHED_RECIPES = 'SET_SEARCHED_RECIPES'
-export const ADD_RECIPE = 'ADD_RECIPE'
+// items
+export const SET_SEARCHED_ITEMS = 'SET_SEARCHED_ITEMS'
+export const ADD_ITEM = 'ADD_ITEM'
 
 // Navigation
 export const SET_TAB = 'SET_TAB'

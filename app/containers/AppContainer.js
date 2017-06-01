@@ -5,8 +5,8 @@ import { ActionCreators } from '../actions';
 import Home from './Home';
 
 class AppContainer extends Component {
-  addRecipe() {
-    this.props.addRecipe();
+  additem() {
+    this.props.additem();
   }
 
   render() {

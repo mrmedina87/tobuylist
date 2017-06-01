@@ -15,11 +15,11 @@ import { connect } from 'react-redux';
 
 class Home extends Component {
   searchPressed() {
-    this.props.fetchRecipes('bacon, cucumber, banana');
+    this.props.fetchitems('bacon, cucumber, banana');
   }
 
-  recipes() {
-    return Object.keys(this.props.searchedRecipes).map( key => this.props.searchedRecipes[key])
+  items() {
+    return Object.keys(this.props.searcheditems).map( key => this.props.searcheditems[key])
   }
 
   render() {
@@ -30,10 +30,10 @@ class Home extends Component {
         </TouchableHighlight>
       </View>
       <ScrollView style={styles.scrollSection}>
-        {this.recipes().map((recipe) => {
-          return <View key={recipe.id} style={styles.scrollSectionElement}>
-            <Text>{recipe.name}</Text>
-            <Text>{recipe.amount}</Text>
+        {this.items().map((item) => {
+          return <View key={item.id} style={styles.scrollSectionElement}>
+            <Text>{item.name}</Text>
+            <Text>{item.amount}</Text>
           </View>
         })}
       </ScrollView>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
-    searchedRecipes: state.searchedRecipes
+    searcheditems: state.searcheditems
   }
 }
 
